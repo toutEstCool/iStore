@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'SF Pro Display Bold';
+	src: local('SF Pro Display Bold'), local('SF-Pro-Display-Bold'),
+		url('../fonts/SFProDisplay-Bold.woff2') format('truetype');
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Display Medium';
+	src: local('SF Pro Display Medium'), local('SF-Pro-Display-Medium'),
+		url('../fonts/SFProDisplay-Medium.woff2') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Display Regular';
+	src: local('SF Pro Display Regular'), local('SF-Pro-Display-Regular'),
+		url('../fonts/SFProDisplay-Regular.woff2') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}

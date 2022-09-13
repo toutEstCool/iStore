@@ -1,0 +1,17 @@
+@import '../variables';
+
+.header {
+	background-color: $headerBackground;
+	&-container {
+		max-width: $mainMaxWidth-1140;
+		margin: 0 auto;
+		.header-nav {
+			.header-list {
+				&-item {
+				}
+			}
+			.header-auth {
+			}
+		}
+	}
+}
