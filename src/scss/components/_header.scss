@@ -2,16 +2,41 @@
 
 .header {
 	background-color: $headerBackground;
+	padding: 3px 0;
 	&-container {
 		max-width: $mainMaxWidth-1140;
+		width: 100%;
 		margin: 0 auto;
 		.header-nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			.header-list {
+				display: flex;
+				align-items: center;
+				gap: 35px;
 				&-item {
 				}
 			}
 			.header-auth {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				img {
+					width: 16px;
+					height: 34px;
+				}
 			}
 		}
 	}
+	a {
+		color: $navItemTextColor;
+		font-size: 0.938rem;
+	}
+}
+
+// Active-Color
+.active {
+	color: $activeTextColor !important;
+	transition: 0.6s;
 }
