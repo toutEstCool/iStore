@@ -1,0 +1,20 @@
+@import '../variables';
+@import '../mixin.scss';
+
+.product-nav {
+	.productNav-container {
+		max-width: $mainMaxWidth-1140;
+		width: 100%;
+		margin: 0 auto;
+
+		.product-nav-block {
+			@include flex(_, space-between);
+
+			li {
+				a {
+					@include flexColumn(3px);
+				}
+			}
+		}
+	}
+}

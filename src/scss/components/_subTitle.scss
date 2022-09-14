@@ -1,15 +1,79 @@
 @import '../variables';
+@import '../mixin.scss';
 
 .subtitle {
+	padding: 20px 0;
 	&-container {
 		max-width: $mainMaxWidth-1140;
 		width: 100%;
 		margin: 0 auto;
 		.subtitle-block {
-			a {
+			@include flex(_, space-between);
+			.subtitle-logo {
 				img {
-					width: 80px;
-					height: 32px;
+					@include wh(80px, 32px);
+				}
+			}
+			.subtitle-list {
+				@include flex(15px, '');
+
+				li {
+					.subtitle-phone {
+						color: $mainTextColor;
+						font-weight: 500;
+					}
+					a {
+						font-size: 0.875rem;
+						color: $secondTextColor;
+						line-height: 18px;
+
+						span {
+							color: $mainTextColor;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+			.subtitle-search {
+				@include flex('', '');
+				max-width: 474.48px;
+				border: 1.5px solid #e8e8e8;
+				border-radius: 100px;
+				padding: 8px 0 8px 8px;
+				transition: 0.6s;
+				cursor: pointer;
+				&:hover {
+					border: 1.5px solid $activeElement;
+				}
+				img {
+					@include wh(20px, 20px);
+					margin-right: 10px;
+				}
+				input {
+					border: none;
+					outline: none;
+					font-size: 0.938rem;
+					&::placeholder {
+						color: $inputPlaceHolderTextColor;
+						font-size: 0.938rem;
+					}
+				}
+			}
+			.subtitle-card {
+				cursor: pointer;
+				position: relative;
+				&::after {
+					content: '2';
+					position: absolute;
+					@include wh(15px, 15px);
+					background: $activeElement;
+					@include flex(_, center);
+					right: 0;
+					bottom: 2px;
+					font-size: 8px;
+					color: #e8e8e8;
+					font-weight: 400;
+					border-radius: 100%;
 				}
 			}
 		}

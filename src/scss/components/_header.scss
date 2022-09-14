@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixin.scss';
 
 .header {
 	background-color: $headerBackground;
@@ -8,20 +9,14 @@
 		width: 100%;
 		margin: 0 auto;
 		.header-nav {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			@include flex(0, space-between);
 			.header-list {
-				display: flex;
-				align-items: center;
-				gap: 35px;
+				@include flex(58px);
 				&-item {
 				}
 			}
 			.header-auth {
-				display: flex;
-				align-items: center;
-				gap: 10px;
+				@include flex(10px);
 				img {
 					width: 16px;
 					height: 34px;
