@@ -1,0 +1,39 @@
+@import '../variables';
+@import '../mixin.scss';
+
+.burger-wrapper {
+	display: none;
+	background: $headerBackground;
+	padding-top: 10px;
+	height: 100vh;
+	.burger-container {
+		max-width: 460px;
+		width: 100%;
+		margin: 0 auto;
+		.burger-nav {
+			border-top: 2px solid #414141;
+
+			&-items {
+				margin-top: 15px;
+				.burger-nav-item {
+					border-bottom: 1px solid #414141;
+					padding: 10px 0;
+					a {
+						font-size: 0.938rem;
+						color: #bcbcbc;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Color Active
+.active {
+	color: $activeTextColor !important;
+	transition: 0.6s;
+}
+
+.burger-active {
+	display: block;
+}

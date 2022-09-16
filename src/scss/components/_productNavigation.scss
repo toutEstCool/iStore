@@ -4,6 +4,9 @@
 .product-nav {
 	background: #f1f1f1;
 	padding: 10px 0;
+	@media all and (max-width: 576px) {
+		display: none;
+	}
 	.productNav-container {
 		max-width: $mainMaxWidth-1140;
 		width: 100%;

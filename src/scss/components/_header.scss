@@ -47,12 +47,20 @@
 
 .header-mobile {
 	background: $headerBackground;
-	margin-bottom: 10px;
+	display: none;
+
+	@media all and (max-width: 576px) {
+		display: block;
+	}
 	.mobile-container {
 		max-width: 540px;
 		margin: 0 auto;
+
+		@media all and (max-width: 576px) {
+			padding: 0 15px;
+		}
 		.header-mobile-nav {
-			height: 35px;
+			height: 45px;
 			@include flex(_, space-between);
 			.header-mobile-burger {
 				@include wh(20px, 20px);
