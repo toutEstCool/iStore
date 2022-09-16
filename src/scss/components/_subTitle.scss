@@ -3,10 +3,22 @@
 
 .subtitle {
 	padding: 20px 0;
+
+	@media all and (max-width: 720px) {
+		display: none;
+	}
 	&-container {
 		max-width: $mainMaxWidth-1140;
 		width: 100%;
 		margin: 0 auto;
+
+		@media all and (max-width: 1140px) {
+			max-width: 992px;
+		}
+
+		@media all and (max-width: 992px) {
+			padding: 0 25px;
+		}
 		.subtitle-block {
 			@include flex(_, space-between);
 			.subtitle-logo {
@@ -45,6 +57,10 @@
 				&:hover {
 					border: 1.5px solid $activeElement;
 				}
+
+				@media all and (max-width: 992px) {
+					max-width: 190px;
+				}
 				img {
 					@include wh(20px, 20px);
 					margin-right: 10px;
@@ -56,6 +72,11 @@
 					&::placeholder {
 						color: $inputPlaceHolderTextColor;
 						font-size: 0.938rem;
+					}
+
+					@media all and (max-width: 992px) {
+						width: 145px;
+						overflow: visible;
 					}
 				}
 			}

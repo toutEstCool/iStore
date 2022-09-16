@@ -2,10 +2,20 @@
 @import '../mixin.scss';
 
 .product-nav {
+	background: #f1f1f1;
+	padding: 10px 0;
 	.productNav-container {
 		max-width: $mainMaxWidth-1140;
 		width: 100%;
 		margin: 0 auto;
+
+		@media all and (max-width: 1140px) {
+			max-width: 992px;
+		}
+
+		@media all and (max-width: 992px) {
+			padding: 0 25px;
+		}
 
 		.product-nav-block {
 			@include flex(_, space-between);
@@ -13,6 +23,15 @@
 			li {
 				a {
 					@include flexColumn(3px);
+					img {
+						height: 35px;
+					}
+
+					p {
+						font-size: 0.75rem !important;
+						font-weight: 100;
+						color: #333333;
+					}
 				}
 			}
 		}
